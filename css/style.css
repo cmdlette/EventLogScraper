@@ -1,0 +1,37 @@
+* {
+    background-color: #000;
+    color: #00ffff;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: auto;
+}
+
+h3 {
+	color: #a0eec5;
+    font-size: 20pt;
+	padding-bottom: 30px;
+	padding-top: 60px;
+	text-align: center;
+	line-height: 1.4;
+}
+
+p {
+    font-size: 16pt;
+}
+
+mark {
+	font-weight: bold;
+	text-decoration: underline;
+	color: #a0eec5;
+}
+
+@media (min-width: 1600px){
+    .container {
+        width: 800px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        width: 600px;
+}
