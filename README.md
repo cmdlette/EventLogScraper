@@ -1,4 +1,4 @@
-# EventLogScraper
+# Scrape-Logs.ps1
 A PowerShell script and associated elements for scraping event logs and generating HTML reports.
 
 # What the PowerShell script does
