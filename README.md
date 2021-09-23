@@ -2,7 +2,7 @@
 A PowerShell script and associated elements for scraping event logs and generating HTML reports.
 
 # What the PowerShell script does
-The script starts with a variable array that defines which event IDs to look for in Windows event logs. For each ID in the variable array, PowerShell will look for the most recent event, and if one matches, it will generate an HTML report in the specified directory.
+The script starts with a variable array that defines which event IDs to look for in Windows event logs. For each ID in the variable array, PowerShell will look for events that happened in the last hour. If an event meets the specified ID and log time criteria, the script will generate an HTML report in the specified directory.
 
 There are some comments in the script to remind you where you'll need to enter your own environment's appropriate information. I've also provided some explanations on the variables I chose and why.
 
