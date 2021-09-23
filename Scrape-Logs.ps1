@@ -13,14 +13,18 @@ $LogTime = $Event.TimeCreated
 # $LogTime above didn't seem to work as part of the filename below
 # I use $date and -force overwrite to prevent us from getting duplicate alerts on the same events
 # The third datetime variable, $timestamp, is used for more precise information in the report itself
-# $LogTime is from event logs. $date is for the filename. $timestamp is to indicate the report's write time.
+# Yet another datetime variable, $timeframe, is used as a comparison with $LogTime so that files are only overwritten for new events
+# $LogTime is from event logs. $date is for the filename. $timestamp is to indicate the report's write time
 $date = Get-Date -Format "yyyyMMdd"
 $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm"
+$timeframe = (Get-Date).AddHours(-1)
 $endpoint = $env:computername
 
 $filename = "$endpoint $EventID $date"
 
 foreach ($Id in $EventID){
+
+if ($LogTime -gt $timeframe) {
 
 # Replace the two instances of "path-to-directory" to your file server
 New-Item -Path "\\path-to-directory\$filename.html" -Force
@@ -64,4 +68,10 @@ Set-Content -Path "\\path-to-directory\$filename.html" `
 	  </div>
 	
     </html>"
+    }
+    
+else {
+    exit
+    }
+    
 }
