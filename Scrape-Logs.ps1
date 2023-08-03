@@ -1,5 +1,7 @@
 # Set the array of Event IDs to scrape
-$EventId = 4648,4720,4727,4728,4729,4730,4732,4740,4756,4782
+$EventId = 4625,4648,4720,4727,4728,4729,4730,4732,4740,4756,4782
+# Note: depending on your environment, you may want to remove 4648, as deployment software that runs scripts will trigger it constantly.
+# Note 2: 4782 should be a rare occurence, and may work better in a script that targets other suspicious events.
 
 # Change the value after Logname to reflect where you are looking in Event Viewer
 # Security is relevant to the IDs defined in the original script
