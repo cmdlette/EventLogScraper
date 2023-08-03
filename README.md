@@ -12,7 +12,7 @@ I didn't want the output of this script to look like motherf---ing website, so I
 # General assumptions about use
 The script is intended to be run as a scheduled task on desired target servers. I wrote it initially for use on Domain Controllers to report on logs regarding privileged accounts and groups. However, by changing the variable array, it can be used to log anything, anywhere.
 
-In my particular environment, it runs once per hour, saving the HTML reports to a Windows file server.
+In my particular environment, it runs every 15 minutes, saving the HTML reports to a Windows file server.
 I utilized FSRM to create a passive file screen that will send email alerts when specified files are saved.
 
 # Other notes
